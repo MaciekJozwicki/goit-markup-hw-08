@@ -2,6 +2,7 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +28,7 @@
           <!-- HEADER LOGO AND NAV -->
           <div class="header__nav">
             <a href="index.html" class="logo"
-              >Web<span class="logo--second-part">Studio</span></a
+              >Web<span class="logo logo--second-part">Studio</span></a
             >
             <nav>
               <div>
@@ -65,6 +66,17 @@
               +48 111 111 111
             </a>
           </div>
+          <!-- MOBILE MENU -->
+
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="header__mobile-menu-icon" width="40" height="40">
+              <use href="./images/icons/icons.svg#icon-hamburger"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -85,9 +97,9 @@
       </section>
       <!-- SITE CONTENT EXAMPLE-->
       <section class="section container">
-        <div>
-          <ul class="example">
-            <li>
+        <div class="example">
+          <ul class="example__list">
+            <li class="example__item">
               <svg width="270" height="120" class="example__image">
                 <use href="./images/icons/icons.svg#icon-antenna"></use>
               </svg>
@@ -99,7 +111,7 @@
                 </span>
               </p>
             </li>
-            <li>
+            <li class="example__item">
               <svg width="270" height="120" class="example__image">
                 <use href="./images/icons/icons.svg#icon-clock"></use>
               </svg>
@@ -111,7 +123,7 @@
                 </span>
               </p>
             </li>
-            <li>
+            <li class="example__item">
               <svg width="270" height="120" class="example__image">
                 <use href="./images/icons/icons.svg#icon-diagram"></use>
               </svg>
@@ -123,7 +135,7 @@
                 </span>
               </p>
             </li>
-            <li>
+            <li class="example__item">
               <svg width="270" height="120" class="example__image">
                 <use href="./images/icons/icons.svg#icon-astronaut"></use>
               </svg>
@@ -185,12 +197,21 @@
           <h2 class="team__header">Nasz zespół</h2>
           <ul class="team__list">
             <li class="team__list-item">
-              <img
-                src="./images/our_team/man1.jpg"
-                alt="man with beard and glasses in violet shirt"
-                width="270"
-                height="260"
-              />
+              <picture class="team__image">
+                <source
+                  srcset="./images/our_team/imgman1-mobile.jpg"
+                  media="(min-width: 767px)"
+                />
+                <source
+                  srcset="./images/our_team/imgman1-tablet.jpg"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  alt="man with beard and glasses in violet shirt"
+                  src="./images/our_team/man1.jpg"
+                  srcset="./images/our_team/imgman1@2x.jpg 2x"
+                />
+              </picture>
               <h3 class="team__employee-name">John Doe</h3>
               <p class="team__employee-job">Product Designer</p>
               <div>
@@ -255,12 +276,21 @@
               </div>
             </li>
             <li class="team__list-item">
-              <img
-                src="./images/our_team/woman1.jpg"
-                alt="woman with blond hair in glasses and dark jacket"
-                width="270"
-                height="260"
-              />
+              <picture class="team__image">
+                <source
+                  srcset="./images/our_team/imgwoman1-mobile.jpg"
+                  media="(min-width: 767px)"
+                />
+                <source
+                  srcset="./images/our_team/imgwoman1-tablet.jpg"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  alt="man with beard and glasses in violet shirt"
+                  src="./images/our_team/woman1.jpg"
+                  srcset="./images/our_team/imgwoman1@2x.jpg 2x"
+                />
+              </picture>
               <h3 class="team__employee-name">John Doe</h3>
               <p class="team__employee-job">Frontend Developer</p>
               <div>
@@ -325,12 +355,21 @@
               </div>
             </li>
             <li class="team__list-item">
-              <img
-                src="./images/our_team/man2.jpg"
-                alt="man in blue shirt"
-                width="270"
-                height="260"
-              />
+              <picture class="team__image">
+                <source
+                  srcset="./images/our_team/imgman2-mobile.jpg"
+                  media="(min-width: 767px)"
+                />
+                <source
+                  srcset="./images/our_team/imgman2-tablet.jpg"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  alt="man with beard and glasses in violet shirt"
+                  src="./images/our_team/man2.jpg"
+                  srcset="./images/our_team/imgman2@2x.jpg 2x"
+                />
+              </picture>
               <h3 class="team__employee-name">John Doe</h3>
               <p class="team__employee-job">Marketing</p>
               <div>
@@ -395,12 +434,21 @@
               </div>
             </li>
             <li class="team__list-item">
-              <img
-                src="./images/our_team/man3.jpg"
-                alt="man with beard and glasses in black t-shirt"
-                width="270"
-                height="260"
-              />
+              <picture class="team__image">
+                <source
+                  srcset="./images/our_team/imgman3-mobile.jpg"
+                  media="(min-width: 767px)"
+                />
+                <source
+                  srcset="./images/our_team/imgman3-tablet.jpg"
+                  media="(min-width: 1200px)"
+                />
+                <img
+                  alt="man with beard and glasses in violet shirt"
+                  src="./images/our_team/man3.jpg"
+                  srcset="./images/our_team/imgman3@2x.jpg 2x"
+                />
+              </picture>
               <h3 class="team__employee-name">John Doe</h3>
               <p class="team__employee-job">UI Designer</p>
               <div>
@@ -507,6 +555,57 @@
         </div>
       </section>
     </main>
+
+    <!-- MOBILE MENU MODAL -->
+
+    <div class="mobile-menu menu-container js-menu-container" id="mobile-menu">
+      <button class="mobile-menu__toggle menu-toggle js-close-menu">
+        <svg class="mobile-menu__close-btn" width="40" height="40">
+          <use href="./images/icons/icons.svg#icon-close-menu"></use>
+        </svg>
+      </button>
+      <nav>
+        <ul class="mobile-menu__nav">
+          <li>
+            <a
+              class="mobile-menu__nav-item mobile-menu__nav-item--is-active"
+              href="index.html"
+              >Agencja</a
+            >
+          </li>
+          <li>
+            <a class="mobile-menu__nav-item" href="portfolio.html">Portfolio</a>
+          </li>
+          <li>
+            <a class="mobile-menu__nav-item" href="#">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <ul class="mobile-menu__contact">
+          <li>
+            <a class="mobile-menu__contact-tel" href="tel:+48111111111"
+              >+48 111 111 111</a
+            >
+          </li>
+          <li>
+            <a
+              class="mobile-menu__contact-mail"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="mobile-menu__social">
+          <li class="mobile-menu__social-item"><a href="#"></a>Instagram</li>
+          <li class="mobile-menu__social-item"><a href="#"></a>Twitter</li>
+          <li class="mobile-menu__social-item"><a href="#"></a>Facebook</li>
+          <li class="mobile-menu__social-item"><a href="#"></a>LinkedIn</li>
+        </ul>
+      </div>
+    </div>
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__wrapper container">
@@ -605,6 +704,7 @@
         </div>
       </div>
     </footer>
+    <!-- FORM MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__close-button" data-modal-close>
@@ -703,6 +803,14 @@
         </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer=""
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

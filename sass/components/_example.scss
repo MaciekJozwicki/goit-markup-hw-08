@@ -1,18 +1,29 @@
 .example {
-    display: flex;
-    gap: 30px;
+
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 480px;
     
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
     &__image {
+        width: 100%;
         background-color: $backgroundColor;
         border-radius: 4px;
         margin-bottom: 30px;
-        padding: 25px 100px;
+        padding: 25px 0;
+
     }
     &__header {
         font-size: 14px;
         font-weight: bold;
         letter-spacing: 0.03em;
         margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
     }
     &__content {
         font-size: 14px;
@@ -21,3 +32,43 @@
         color: $secondaryFontColor;
     }
 }
+
+@media screen and (min-width:768px){
+    .example {
+        max-width: 768px;
+    &__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__item {
+        max-width: 354px;
+    }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .example {
+        max-width: 1200px;
+        &__list {
+            flex-wrap: nowrap;
+        }
+        &__image {
+            background-color: $backgroundColor;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            padding: 25px 100px;
+        }
+        &__header {
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.03em;
+            margin-bottom: 10px;
+        }
+        &__content {
+            font-size: 14px;
+            line-height: 1.7;
+            letter-spacing: 0.03em;
+            color: $secondaryFontColor;
+        }
+    }
+}    
